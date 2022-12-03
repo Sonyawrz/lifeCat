@@ -34,4 +34,21 @@ class Student:
     print('Gladness: ', self.gladness, 'Progress ',self.progress)
   def live(self, day):
     day = "Day " + str(day) + " of " + self.breed + " life"
-    
+    print(day)
+    live_cube = randint(1,4)
+    if live_cube == 1:
+      self.to_study()
+    elif live_cube == 2:
+      self.to_sleep()
+    elif live_cube == 3:
+      self.to_chill()
+    elif live_cube == 4:
+      self.say_hello()
+    self.statics()
+    self.is_alive()
+
+cat = Student('Cat')
+for day in range(365):
+  if cat.alive == False:
+    break
+  cat.live(day)
